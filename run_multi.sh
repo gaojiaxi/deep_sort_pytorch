@@ -1,4 +1,3 @@
-for filename in /home/gaojiaxi/deep_sort_pytorch/sample_video/*
-do
-  python yolov3_deepsort.py  $filename
-done;
+for filename in `find . -path '*Video*/*' -name "*.av" -type f`; do
+    python yolov3_deepsort.py $filename
+done
